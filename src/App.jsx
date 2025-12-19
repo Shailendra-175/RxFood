@@ -17,6 +17,9 @@ import CartPage from "./components/CartPage";
 import { CartProvider } from "./components/CartContext";
 import BookAppointment from "./components/BookAppointment";
 import ChatBoat from "./components/ChatBoat";
+import CheckoutPage from "./components/CheckoutPage";
+import PaymentPage from "./components/PaymentPage";
+import OrderSuccess from "./components/OrderSuccess";
 
 
 
@@ -79,9 +82,25 @@ function App() {
             <Layout> <HealthPlans /></Layout>} />
           <Route path="/health-shop" element={
             <Layout> <HealthShop /> </Layout>} />
-          <Route path="/cart" element={<CartPage />} />
+          <Route path="/cart" element={<Layout><CartPage /></Layout>} />
           <Route path="/health-recipes" element={
             <Layout><HealthyRecipes /> </Layout>} />
+
+          <Route path="/checkout" element={
+            <Layout>
+              <CheckoutPage />
+            </Layout>
+          } />
+          <Route path="/payment" element={
+            <Layout>
+              <PaymentPage />
+            </Layout>
+          } />
+          <Route path="/order-success" element={
+            <Layout>
+              <OrderSuccess />
+            </Layout>
+          } />
 
         </Routes>
       </Router>

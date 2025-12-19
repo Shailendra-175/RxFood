@@ -1,9 +1,18 @@
 import React, { useContext } from "react";
 import { CartContext } from "./CartContext";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 export default function CartPage() {
-  const { cart, removeFromCart, total } = useContext(CartContext);
+  const context = useContext(CartContext);
+
+  // Safety check if context is missing
+  if (!context) {
+    return <div className="cart-page-container">Error: Cart context not available. Check CartProvider setup.</div>;
+  }
+
+  const { cart = [], removeFromCart, total = 0 } = context;
+  const navigate = useNavigate();
 
   return (
     <div className="cart-page-container">
@@ -15,8 +24,14 @@ export default function CartPage() {
         <div className="cart-content">
           <div className="cart-items">
             {cart.map((item, index) => (
-              <div key={index} className="cart-item">
-                <img src={item.image} alt={item.name} className="cart-item-img" />
+              <div key={item.id} className="cart-item">
+                <img
+                  src={`/RxFood/images/${item.image}`}
+
+                  alt={item.name}
+                  className="cart-item-image"
+                  onError={(e) => console.error('Image load failed:', `/RxFood/images/${item.image}`)}
+                />
                 <div className="cart-item-info">
                   <h3>{item.name}</h3>
                   <p className="cart-item-price">₹ {item.price}</p>
@@ -28,13 +43,25 @@ export default function CartPage() {
             ))}
           </div>
 
-                <div className="cart-summary">
+          <div className="cart-summary">
             <h3>Order Summary</h3>
             <p>Total: <strong>₹ {total}</strong></p>
-             </div>
-                          <button className="checkout-btn">Proceed to Checkout</button>
+          </div>
+
+          <div className="cart-buttons">
+            <button
+              className="proceed-buy-btn"
+              onClick={() => navigate('/checkout')}
+            >
+              Proceed to Buy
+            </button>
+            <button className="checkout-btn"
+              onClick={() => navigate('/payment')}>
+              Proceed to Checkout
+            </button>
+          </div>
         </div>
-      )}
+      )};
     </div>
   );
 }
