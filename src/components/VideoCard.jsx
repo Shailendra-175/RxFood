@@ -1,12 +1,30 @@
 // src/components/VideoCard.jsx
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
-export default function VideoCard({ video }) {
-  const { name, diagnosis, dischargedDate, videoUrl, package: pkg } = video;
+export default function VideoCard({ video, playingVideoId, setPlayingVideoId }) {
+  const {id, name, diagnosis, dischargedDate, videoUrl, package: pkg } = video;
+  const videoRef = useRef(null);
+
+
+   useEffect(() => {
+    if (!videoRef.current) return;
+
+    if (playingVideoId === id) {
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0; // optional: reset to start
+    }
+  }, [playingVideoId, id]);
+
+  const handlePlay = () => {
+    setPlayingVideoId(id); // mark this video as playing
+  };
+
 
   return (
     <div className="video-card">
-      <video controls width="300">
+      <video  ref={videoRef} controls width="300"  onPlay={handlePlay} >
         <source src={videoUrl} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

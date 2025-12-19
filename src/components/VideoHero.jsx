@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import sampleVideo from "../assets/sample-video.mp4"; // put your video file in src/assets
+import sampleVideo from "../assets/grok7-video.mp4"; // put your video file in src/assets
 
 function VideoHero() {
   return (
@@ -17,7 +17,7 @@ function VideoHero() {
 
       {/* Overlay content */}
       <div className="overlay">
-        <h1 className="headline">Let food be a first medicine and kitchen be a first pharmacy</h1>
+        {/* <h1 className="headline">Let food be a first medicine and kitchen be a first pharmacy</h1> */}
         <p className="subtext">Your transformation starts here </p>
        <Link to="/book-appointment" className="cta-btn">
           Book Your Consultation

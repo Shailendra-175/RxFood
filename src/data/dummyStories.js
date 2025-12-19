@@ -1,10 +1,13 @@
+
+
+const BASE = import.meta.env.BASE_URL;
 const dummyStories = [
   {
     id: 1,
     name: "Aarushi Sharma",
     diagnosis: "PCOD / PCOS",
     dischargedDate: "2025-08-10",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: `${BASE}Videos/pcod.mp4`,
     package: "PCOD / PCOS Management",
   },
   {
@@ -12,7 +15,7 @@ const dummyStories = [
     name: "Ramesh Gupta",
     diagnosis: "Type 2 Diabetes",
     dischargedDate: "2025-07-20",
-    videoUrl: "https://www.w3schools.com/html/movie.mp4",
+    videoUrl: `${BASE}Videos/Diabetic.mp4`,
     package: "Diabetes Care Plan"
   },
   {
@@ -20,7 +23,7 @@ const dummyStories = [
     name: "Suresh Menon",
     diagnosis: "High Cholesterol",
     dischargedDate: "2025-06-15",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: `${BASE}Videos/cholestral.mp4`,
     package: "Heart & Cholesterol Health"
   },
   {
@@ -28,7 +31,7 @@ const dummyStories = [
     name: "Meena Patel",
     diagnosis: "Hypertension",
     dischargedDate: "2025-08-01",
-    videoUrl: "https://www.w3schools.com/html/movie.mp4",
+    videoUrl: `${BASE}Videos/Bloodpressure.mp4`,
     package: "Blood Pressure Control"
   },
   {
@@ -36,7 +39,7 @@ const dummyStories = [
     name: "Arjun Rao",
     diagnosis: "GI Surgery Recovery",
     dischargedDate: "2025-09-05",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl:  `${BASE}Videos/Rtfeed.mp4`,
     package: "Post-Surgery Nutrition (RT Feeds)"
   },
   {
@@ -44,7 +47,7 @@ const dummyStories = [
     name: "Divya Nair",
     diagnosis: "Hypothyroidism",
     dischargedDate: "2025-08-25",
-    videoUrl: "https://www.w3schools.com/html/movie.mp4",
+    videoUrl: `${BASE}Videos/Thyroid.mp4`,
     package: "Thyroid Care Package"
   },
   {
@@ -52,7 +55,7 @@ const dummyStories = [
     name: "Vikram Singh",
     diagnosis: "Chronic Kidney Disease",
     dischargedDate: "2025-07-30",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: `${BASE}Videos/Kidney Care.mp4`,
     package: "Kidney Care Plan"
   },
   {
@@ -60,7 +63,7 @@ const dummyStories = [
     name: "Sanjana Reddy",
     diagnosis: "Fatty Liver",
     dischargedDate: "2025-09-12",
-    videoUrl: "https://www.w3schools.com/html/movie.mp4",
+    videoUrl: `${BASE}Videos/Fatty Liver.mp4`,
     package: "Liver Care Package"
   },
   {
@@ -68,7 +71,7 @@ const dummyStories = [
     name: "Karthik Iyer",
     diagnosis: "Cancer (Post Chemo)",
     dischargedDate: "2025-08-05",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: `${BASE}Videos/Cancer.mp4`,
     package: "Cancer Nutrition Package"
   },
   {
@@ -76,7 +79,7 @@ const dummyStories = [
     name: "Anita Das",
     diagnosis: "IBS & Gastritis",
     dischargedDate: "2025-09-02",
-    videoUrl: "https://www.w3schools.com/html/movie.mp4",
+    videoUrl: `${BASE}Videos/Gastritis.mp4`,
     package: "Gastrointestinal (GI Health)"
   },
   {
@@ -84,7 +87,7 @@ const dummyStories = [
     name: "Pooja Verma",
     diagnosis: "Pregnancy (3rd Trimester)",
     dischargedDate: "2025-08-18",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: `${BASE}Videos/Pregnancy.mp4`,
     package: "Pregnancy Nutrition Package"
   },
   {
@@ -92,7 +95,7 @@ const dummyStories = [
     name: "Sneha Kulkarni",
     diagnosis: "Post Delivery Recovery",
     dischargedDate: "2025-09-10",
-    videoUrl: "https://www.w3schools.com/html/movie.mp4",
+    videoUrl: `${BASE}Videos/Post Delivery.mp4`,
     package: "Lactation Nutrition Package"
   },
   {
@@ -100,7 +103,7 @@ const dummyStories = [
     name: "Rohit Sharma (Child)",
     diagnosis: "Anemia & Low Weight",
     dischargedDate: "2025-07-25",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: `${BASE}Videos/Child Nutrition.mp4`,
     package: "Child Nutrition Package"
   },
   {
@@ -108,7 +111,7 @@ const dummyStories = [
     name: "Krishna Murthy",
     diagnosis: "Joint Pain & Diabetes",
     dischargedDate: "2025-08-28",
-    videoUrl: "https://www.w3schools.com/html/movie.mp4",
+    videoUrl: `${BASE}Videos/Joint Pain.mp4`,
     package: "Senior Citizen Nutrition"
   },
   {
@@ -116,7 +119,7 @@ const dummyStories = [
     name: "Aditya Mehra",
     diagnosis: "Sports Nutrition (Athlete)",
     dischargedDate: "2025-09-08",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoUrl: `${BASE}Videos/Sports.mp4`,
     package: "Sports & Fitness Nutrition"
   }
 ];

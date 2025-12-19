@@ -1,5 +1,7 @@
 // src/data/dummyRecipes.js
 
+const BASE = import.meta.env.BASE_URL;
+
 const recipes = [
   {
     title: "Avocado Toast",
@@ -18,7 +20,7 @@ const recipes = [
       "Spread the avocado on bread.",
       "Top with cherry tomatoes."
     ],
-    video: "https://www.youtube.com/embed/VIDEO_ID",
+    video: `${BASE}Videos/Avacado Toast.mp4`,
   },
   {
     title: "Quinoa Salad",
@@ -37,7 +39,7 @@ const recipes = [
       "Mix everything with lemon juice and olive oil.",
       "Season with salt."
     ],
-    video: "https://www.youtube.com/embed/c06dTj0v0sM"
+    video: `${BASE}Videos/Quinoa.mp4`
   },
   {
     title: "Smoothie Bowl",
@@ -55,7 +57,7 @@ const recipes = [
       "Pour into a bowl.",
       "Top with granola and chia seeds."
     ],
-    video: "https://www.youtube.com/embed/HDXm7Wf0r6A"
+    video: `${BASE}Videos/Smoothie Bowl.mp4`
   }
 ];
 

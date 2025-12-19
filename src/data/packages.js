@@ -2,7 +2,7 @@ const packages = [
   { 
     id: 1, 
     title: "PCOD / PCOS Management", 
-    image: "packages/PCOD-PCOS.png",
+    image: "PCOD.png",
     includes: [
       "Hormone-friendly meal planning",
       "Weight management & insulin resistance support",
@@ -15,7 +15,7 @@ const packages = [
   { 
     id: 2, 
     title: "Diabetes Care Plan",
-    image: "packages/Diabetic.png",
+    image: "Diabetic.png",
     includes: [
       "Personalized diabetic meal plan",
       "Carbohydrate counting guidance",
@@ -28,7 +28,7 @@ const packages = [
   { 
     id: 3, 
     title: "Heart & Cholesterol Health",
-    image: "packages/Heart-Health.png",
+    image: "Heart-Health.png",
     includes: [
       "Heart-healthy diet plans (low cholesterol, high fiber)",
       "Omega-3 & healthy fat guidance",
@@ -40,7 +40,7 @@ const packages = [
   { 
     id: 4, 
     title: "Blood Pressure Control",
-    image: "packages/BP-Control.png",
+    image: "BP-Control.png",
     includes: [
       "DASH diet–based meal planning",
       "Low sodium & balanced micronutrient diet",
@@ -52,7 +52,7 @@ const packages = [
   { 
     id: 5, 
     title: "Post-Surgery Nutrition (RT Feeds)",
-    image: "packages/Post-Surgery.png",
+    image: "Post-Surgery.png",
     includes: [
       "RT feed formula guidance",
       "Protein & calorie-focused recovery diets",
@@ -64,7 +64,7 @@ const packages = [
   { 
     id: 6, 
     title: "Thyroid Care Package",
-    image: "packages/Thyroid-Care.png",
+    image: "Thyroid-Care.png",
     includes: [
       "Thyroid-supportive diet (iodine, selenium, gluten-free if needed)",
       "Weight & metabolism management",
@@ -76,7 +76,7 @@ const packages = [
   { 
     id: 7, 
     title: "Kidney Care Plan",
-    image: "packages/Kidney-Care.png",
+    image: "Kidney-Care.png",
     includes: [
       "Low sodium, potassium & phosphorus meal plans",
       "Protein-controlled diets for CKD",
@@ -88,7 +88,7 @@ const packages = [
   { 
     id: 8, 
     title: "Liver Care Package",
-    image: "packages/Liver-Care.png",
+    image: "Liver-Care.png",
     includes: [
       "Fatty liver reversal diet",
       "High-protein, low-fat meal planning",
@@ -100,7 +100,7 @@ const packages = [
   { 
     id: 9, 
     title: "Cancer Nutrition Package",
-    image: "packages/Cancer-Care.png",
+    image: "Cancer-Care.png",
     includes: [
       "High-calorie, high-protein therapeutic diets",
       "Meal adjustments during chemo/radiation",
@@ -112,7 +112,7 @@ const packages = [
   { 
     id: 10, 
     title: "Gastrointestinal (GI Health)",
-    image: "packages/Gastric.png",
+    image: "Gastric.png",
     includes: [
       "IBS/IBD/Acidity management diet",
       "Gut-healing nutrition (low FODMAP if required)",
@@ -124,7 +124,7 @@ const packages = [
   { 
     id: 11, 
     title: "Pregnancy Nutrition Package",
-    image: "packages/Pregnancy.png",
+    image: "Pregnancy.png",
     includes: [
       "Trimester-wise nutrition planning",
       "Balanced diet for fetal growth",
@@ -136,7 +136,7 @@ const packages = [
   { 
     id: 12, 
     title: "Lactation Nutrition Package",
-    image: "packages/Mother-Feed.png",
+    image: "Mother-Feed.png",
     includes: [
       "Post-delivery recovery diet",
       "Breast milk–boosting foods",
@@ -148,7 +148,7 @@ const packages = [
   { 
     id: 13, 
     title: "Child Nutrition Package",
-    image: "packages/Childrens.png",
+    image: "Childrens.png",
     includes: [
       "Growth & immunity-focused diet",
       "Address picky eating, undernutrition, anemia",
@@ -160,7 +160,7 @@ const packages = [
   { 
     id: 14, 
     title: "Senior Citizen Nutrition",
-    image: "packages/Elderly-People.png",
+    image: "Elderly-People.png",
     includes: [
       "Easy-to-digest, nutrient-dense diet",
       "Joint & bone health support (calcium, vitamin D, protein)",
@@ -172,7 +172,7 @@ const packages = [
   { 
     id: 15, 
     title: "Sports & Fitness Nutrition",
-    image: "packages/Sports-Gym.png",
+    image: "Sports-Gym.png",
     includes: [
       "Athlete-specific macro & micro planning",
       "Pre & post-workout nutrition",

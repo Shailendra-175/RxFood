@@ -1,8 +1,24 @@
-import React from "react";
+import React,{ useState, useRef, useEffect } from "react";
 import "../App.css";
 import recipes from "../data/dummyRecipes";
 
 function HealthyRecipes() {
+const [playingVideoId, setPlayingVideoId] = useState(null);
+   const videoRefs = useRef([]); // array of refs
+
+   useEffect(() => {
+    videoRefs.current.forEach((videoEl, idx) => {
+      if (!videoEl) return;
+      if (playingVideoId === idx) {
+        videoEl.play();
+      } else {
+        videoEl.pause();
+        videoEl.currentTime = 0;
+      }
+    });
+  }, [playingVideoId]);
+
+
   return (
     <div className="recipes-page">
       <h2 className="recipes-title">🍏 Healthy Recipes</h2>
@@ -33,15 +49,15 @@ function HealthyRecipes() {
             </div>
 
             <div className="recipe-video">
-              <iframe
+              <video
+                ref={(el) => (videoRefs.current[index] = el)}
                 width="100%"
-                height="200"
-                src={recipe.video}
-                title={recipe.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+                controls
+                onPlay={() => setPlayingVideoId(index)}
+                onEnded={() => setPlayingVideoId(null)}
+              >
+                  <source src={recipe.video} type="video/mp4" />
+              </video>
             </div>
           </div>
         ))}

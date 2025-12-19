@@ -7,6 +7,8 @@ export default function PatientVideoReviews() {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const [playingVideoId, setPlayingVideoId] = useState(null);
+
   useEffect(() => {
     // Use dummy stories for now
     setVideos(dummyStories);
@@ -22,7 +24,9 @@ export default function PatientVideoReviews() {
         {videos.length === 0 ? (
           <p>No patient stories available.</p>
         ) : (
-          videos.map((video) => <VideoCard key={video.id} video={video} />)
+          videos.map((video) => <VideoCard key={video.id} video={video}
+            playingVideoId={playingVideoId}
+            setPlayingVideoId={setPlayingVideoId} />)
         )}
       </div>
     </div>
@@ -1313,10 +1317,10 @@ export default function PatientVideoReviews() {
 
 
 
-    
-    
-    
-  
+
+
+
+
 
 
 

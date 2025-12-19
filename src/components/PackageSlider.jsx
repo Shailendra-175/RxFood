@@ -24,10 +24,10 @@ export default function PackageSlider() {
             <div className="package-card">
               {/* ✅ Add image rendering */}
               <img
-                src={pkg.image}
+                src={`${import.meta.env.BASE_URL}packages/${pkg.image}`}
                 alt={pkg.title}
-                className="package-image"
-              />
+                className="packages-image"
+                             />
 
               <h3 className="package-title">{pkg.title}</h3>
 

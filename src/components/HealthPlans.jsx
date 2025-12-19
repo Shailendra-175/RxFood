@@ -12,7 +12,7 @@ export default function HealthPlans() {
         {packages.map((pkg) => (
           <div key={pkg.id} className="package-card">
             <img
-              src={pkg.image}
+               src={`${import.meta.env.BASE_URL}packages/${pkg.image}`}
               alt={pkg.title}
               className="package-image"
             />
